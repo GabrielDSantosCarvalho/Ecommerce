@@ -1,0 +1,165 @@
+#cadastra {
+    display: none;
+  }
+/* Reset de estilos para garantir consistência entre navegadores */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Define um fundo escuro e uma fonte elegante para o corpo do documento */
+body {
+    background-color: #1e1e1e;
+    font-family: 'Arial', sans-serif;
+    color: #fff;
+}
+
+/* Estiliza o cabeçalho com uma cor de fundo escura e texto claro */
+header {
+    background-color: #333;
+    color: #fff;
+    padding: 20px;
+    text-align: center;
+    border-bottom: 2px solid #555;
+}
+
+/* Estiliza links com sublinhado removido e cor de texto suave */
+a {
+    text-decoration: none;
+    color: #ccc;
+    transition: color 0.3s ease;
+}
+
+a:hover {
+    color: #fff;
+}
+
+/* Estiliza uma barra de navegação com fundo escuro e texto claro */
+nav {
+    background-color: #1e1e1e;
+    color: #fff;
+    text-align: center;
+    padding: 10px 0;
+    border-bottom: 2px solid #333;
+}
+
+/* Define estilos para uma seção principal do conteúdo */
+.main-content {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+/* Estiliza cabeçalhos com tamanhos diferentes e cor clara */
+h1, h2, h3 {
+    color: #fff;
+}
+
+h1 {
+    font-size: 36px;
+}
+
+h2 {
+    font-size: 32px;
+}
+
+h3 {
+    font-size: 28px;
+}
+
+/* Estiliza caixas de texto de entrada e rótulos com bordas suaves */
+input[type="text"],
+input[type="password"],
+input[type="email"],
+textarea {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #444;
+    border-radius: 8px;
+    background-color: #333;
+    color: #fff;
+}
+
+label {
+    font-weight: bold;
+}
+
+/* Estiliza botões com uma cor de fundo atraente e texto claro */
+button {
+    background-color: #4caf50;
+    color: #fff;
+    padding: 12px 24px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #45a049;
+}
+
+/* Estiliza rodapé com cor de fundo escura e texto claro */
+footer {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 10px;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
+
+
+form {
+    background-color: #333;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+    max-width: 300px;
+    margin: 0 auto;
+}
+
+.product input[type="submit"] {
+    background-color: #ff6600; /* Cor de destaque para o botão */
+    color: #fff;
+    padding: 5px 10px;
+    border: none;
+    cursor: pointer;
+    font-weight: bold;
+  }
+
+  
+.menu li {
+    display: inline-block; /* Itens de menu ficam lado a lado */
+  }
+  
+  .menu li a {
+    display: block; /* Links são elementos de bloco para ocuparem toda a largura disponível */
+    padding: 8px 16px; /* Espaçamento interno dos links */
+    text-decoration: none; /* Remove a decoração de texto padrão (sublinhado) */
+    color: #fff; /* Cor do texto dos links */
+  }
+  
+  .menu li a:hover {
+    background-color: #555; /* Cor de fundo ao passar o mouse sobre os links */
+    color: #fff; /* Cor do texto ao passar o mouse sobre os links */
+    border-radius: 10px;
+  }
+  
+  .menuloja {
+    float: right;
+  }
+   /* DIV DO FORMULÁRIO */
+   .formulario {
+    float: left;
+    margin-left: 10%;
+  }
+  
+  .profile {
+    float: right;
+    margin: 7px 5px 0 0;
+    color: #fff;
+  }

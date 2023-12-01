@@ -1,0 +1,124 @@
+body {
+    background-color: #1e1e1e;
+    color: #fff;
+    font-family: 'Arial', sans-serif;
+}
+
+.formulario {
+    width: 50%;
+    margin: 50px auto;
+    padding: 20px;
+    background-color: #333;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+}
+
+.visualizaproduto label {
+    display: block;
+    margin-bottom: 5px;
+    color: #fff;
+}
+
+.visualizaproduto input[type="text"],
+.visualizaproduto textarea,
+.visualizaproduto input[type="number"],
+.visualizaproduto input[type="decimal"] {
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 10px;
+    box-sizing: border-box;
+    background-color: #444;
+    border: 1px solid #666;
+    color: #fff;
+}
+
+.visualizaproduto input[type="submit"] {
+    background-color: #ff6600;
+    color: #fff;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.visualizaproduto input[type="submit"]:hover {
+    background-color: #ff6600;
+}
+
+.imagem_atual {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin-top: 20px;
+}
+
+a {
+    text-decoration: none;
+    color: #fff;
+}
+
+a:hover {
+    color: #ff6600;
+}
+
+
+.menu {
+    list-style-type: none; /* Remove os marcadores de lista */
+    margin: 0;
+    padding: 0;
+    background-color: #222; /* Cor de fundo do menu */
+    border-radius: 10px;
+  }
+  
+  .menu li {
+    display: inline-block; /* Itens de menu ficam lado a lado */
+  }
+  
+  .menu li a {
+    display: block; /* Links são elementos de bloco para ocuparem toda a largura disponível */
+    padding: 8px 16px; /* Espaçamento interno dos links */
+    text-decoration: none; /* Remove a decoração de texto padrão (sublinhado) */
+    color: #fff; /* Cor do texto dos links */
+  }
+  
+  .menu li a:hover {
+    background-color: #555; /* Cor de fundo ao passar o mouse sobre os links */
+    color: #fff; /* Cor do texto ao passar o mouse sobre os links */
+    border-radius: 10px;
+  }
+  
+  .menuloja {
+    float: right;
+  }
+   /* DIV DO FORMULÁRIO */
+   .formulario {
+    float: left;
+    margin-left: 10%;
+  }
+  
+  .profile {
+    float: right;
+    margin: 7px 5px 0 0;
+    color: #fff;
+  }
+  .imagem-com-borda {
+    border: 1px solid #000000; /* Adicione uma borda branca à imagem */
+    border-radius: 1000px; /* Adicione bordas arredondadas */
+    padding: 1px; /* Adicione algum espaçamento interno para a borda */
+    max-width: 1000px;
+    height: 266px;
+    margin-top: 1px;
+    padding: 5px;
+}
+
+.imagem_atual {
+  max-width: 100%;
+  height: auto;
+  display: block;
+  margin-top: 20px;
+  border: 2px solid #fff; /* Adicione uma borda branca à imagem */
+  border-radius: 10px; /* Adicione bordas arredondadas */
+  padding: 10px; /* Adicione algum espaçamento interno para a borda */
+}
+
+/* Adicione a classe 'imagem-com-borda' à sua tag <img> no HTML */

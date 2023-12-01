@@ -6,8 +6,15 @@
         $nome = $_POST["nomeusuario"];
         $senha = $_POST["senha"];
 
+
+        if (preg_match('/^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[^a-zA-Z\d])/', $senha)) 
+        #(?=.*[a-z]): Pelo menos 1 letra minúscula.
+        #(?=.*[A-Z]): Pelo menos 1 letra maiúscula.
+        #(?=.*\d): Pelo menos 1 numeral.
+        #(?=.*[^a-zA-Z\d]): Pelo menos 1 caractere especial 
+        
         #BUSCA A SALSA
-        $sql = "SELECT usu_salsa FROM username WHERE usu_nome = '$nome'";
+        $sql = "SELECT cli_salsa FROM clientes WHERE cli_nome = '$nome'";
         $retorno = mysqli_query($link, $sql);
         while ($tbl = mysqli_fetch_array($retorno)) {
             $salsa = $tbl[0];
@@ -15,20 +22,20 @@
 
         $senha = md5($senha . $salsa);
 
-        $sql = "SELECT COUNT(usu_id) FROM username WHERE usu_nome = '$nome' AND usu_senha = '$senha'";
+        $sql = "SELECT COUNT(cli_id) FROM clientes WHERE cli_nome = '$nome' AND cli_senha = '$senha'";
         $retorno = mysqli_query($link, $sql);
         while ($tbl = mysqli_fetch_array($retorno)) {
             $cont = $tbl[0];
         } 
 
         if ($cont == 1) {
-            $sql = "SELECT * FROM username WHERE usu_nome = '$nome' AND usu_senha = '$senha' AND usu_ativo = 's'";
+            $sql = "SELECT * FROM clientes WHERE cli_nome = '$nome' AND cli_senha = '$senha' AND cli_ativo = 's'";
             $retorno = mysqli_query($link, $sql);
             while ($tbl = mysqli_fetch_array($retorno)) {
                 $_SESSION['idusuario'] = $tbl[0];
                 $_SESSION['nomeusuario'] = $tbl[1];
             }
-            echo "<script>window.location.href='listadeusuario.php';</script>";
+            echo "<script>window.location.href='loja.php';</script>";
         } else {
             echo "<script>window.alert('USUARIO OU SENHA INCORRETOS');</script>";
         }
@@ -40,16 +47,21 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./css/cliente.css">
-    <title>Login Usuário</title>
+    <title>Login Clientes</title>
 </head>
 <body>
-    <form action="loginusuario.php" method="POST">
-    <h1>LOGIN USUÁRIO</h1>
+    <br><br><br><br><br><br><br><br><br><br><br>
+    <form action="loginclientes.php" method="POST">
+    <h1>LOGIN CLIENTES</h1>
     <input type="text" name="nomeusuario" id="nome" placeholder="Nome">
     <p></p>
     <input type="password" id="senha" name="senha"  placeholder="Senha">
     <p></p>
     <input type="submit" name="login" value="LOGIN">
     </form>
-    
+    <div>
+        <button onclick="location.href='cadastracliente.php'">Cadastrar Cliente</button>
+        <button onclick="location.href='recupera.php'">Recuperar Senha</button>
+    </div>
+</body>
 </html>

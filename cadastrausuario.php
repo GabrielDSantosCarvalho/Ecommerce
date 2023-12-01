@@ -1,11 +1,17 @@
 <?php
 #INICIA A CONEXÃO COM O BANCO DE DADOS
-include("conectadb.php");
+include("cabecalho.php");
 
 #COLETA DE VARIÁVEIS VIA FORMULÁRIO DE HTML
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $nome = $_POST['nome'];
     $senha = $_POST['senha'];
+
+    if (preg_match('/^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[^a-zA-Z\d])/', $senha)) 
+        #(?=.*[a-z]): Pelo menos 1 letra minúscula.
+        #(?=.*[A-Z]): Pelo menos 1 letra maiúscula.
+        #(?=.*\d): Pelo menos 1 numeral.
+        #(?=.*[^a-zA-Z\d]): Pelo menos 1 caractere especial 
 
     #PASSANDO INSTRUÇÕES SQL PARA O BANCO
     #VALIDANDO SE USUARIO EXISTE
@@ -18,9 +24,17 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     if ($cont > 0) {
         echo "<script>window.alert('USUARIO JÁ CADASTRADO!');</script>";
     } else {
-        $sql = "INSERT INTO username (usu_nome, usu_senha, usu_ativo) 
-        VALUES('$nome', '$senha', 's')";
+        #adicionar a salsa
+        $salsa = md5(rand() . date('H:i:s'));
+        $senha = md5($senha . $salsa);
+
+
+        $sql = "INSERT INTO username (usu_nome, usu_senha, usu_ativo, usu_salsa) 
+        VALUES('$nome', '$senha', 's', '$salsa')";
         mysqli_query($link, $sql);
+
+        echo($sql);
+
         echo "<script>window.alert('USUARIO CADASTRADO');</script>";
         echo "<script>window.location.href='cadastrausuario.php';</script>";
     }
@@ -31,7 +45,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
 <html>
 <head>
-    <link rel="stylesheet" href="./css/estiloadm.css">
+    <link rel="stylesheet" href="./css/stylesadm.css">
     <title> CADASTRO DE USUARIO</title>
 </head>
 <body>

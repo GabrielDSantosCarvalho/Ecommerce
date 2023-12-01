@@ -1,0 +1,104 @@
+/* Estilos gerais da página */
+body {
+    background-color: #232323;
+    color: #fff;
+    font-family: Arial, sans-serif;
+    text-align: center;
+    margin: 0;
+    padding: 0;
+}
+
+h1 {
+    font-size: 24px;
+}
+
+form {
+    margin-top: 25%;
+}
+
+/* Estilos do formulário de login */
+form {
+    background-color: #333;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+    max-width: 300px;
+    margin: 0 auto;
+}
+
+input[type="text"],
+input[type="password"] {
+    width: 90%;
+    padding: 10px;
+    margin: 10px 0;
+    border: none;
+    background-color: #444;
+    color: #fff;
+    border-radius: 5px;
+}
+
+input[type="submit"] {
+    width: 100%;
+    padding: 10px;
+    background-color: #ff6600;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+input[type="submit"]:hover {
+    background-color: #0056b3;
+}
+
+/* Estilos dos botões */
+div {
+    margin-top: 20px;
+}
+
+button {
+    padding: 10px 20px;
+    background-color: #ff6600;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin: 0 10px;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+
+.menu li {
+    display: inline-block; /* Itens de menu ficam lado a lado */
+  }
+  
+  .menu li a {
+    display: block; /* Links são elementos de bloco para ocuparem toda a largura disponível */
+    padding: 8px 16px; /* Espaçamento interno dos links */
+    text-decoration: none; /* Remove a decoração de texto padrão (sublinhado) */
+    color: #fff; /* Cor do texto dos links */
+  }
+  
+  .menu li a:hover {
+    background-color: #555; /* Cor de fundo ao passar o mouse sobre os links */
+    color: #fff; /* Cor do texto ao passar o mouse sobre os links */
+    border-radius: 10px;
+  }
+  
+  .menuloja {
+    float: right;
+  }
+   /* DIV DO FORMULÁRIO */
+   .formulario {
+    float: left;
+    margin-left: 10%;
+  }
+  
+  .profile {
+    float: right;
+    margin: 7px 5px 0 0;
+    color: #fff;
+  }

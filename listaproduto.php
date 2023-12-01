@@ -1,5 +1,5 @@
 <?php
-include("conectadb.php");
+include("cabecalho.php");
 
 $sql = "SELECT * FROM produtos WHERE pro_ativo = 's'";
 $retorno = mysqli_query($link, $sql);
@@ -37,7 +37,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Lista de Produtos</title>
-    <link rel="stylesheet" href="estiloadm.css">
+    <link rel="stylesheet" href="./css/stylesadm.css">
 </head>
 
 <body>
@@ -48,6 +48,8 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
             <input type="radio" name="ativo" class="radio" value="n" required onclick="submit()" <?= $ativo == "n" ? "checked" : "" ?>>Ativos
             <br>
             <input type="radio" name="ativo" class="radio" value="all" required onclick="submit()" <?= $ativo == "all"? "checked" : "" ?>>Mostrar Todos
+            <br>
+            <br>
         </form>
         <div class="container">
             <table border="1">
@@ -58,6 +60,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
                     <th>Valor</th>
                     <th>Ativo</th>
                     <th>Imagem</th>
+                    <th>Alterar dados</th>
                 </tr>
                 
                  <?php
@@ -68,10 +71,14 @@ if (mysqli_num_rows($retorno) > 0) {
             <td><?= $tbl['pro_nome'] ?></td>
             <td><?= $tbl['pro_desc'] ?></td>
             <td><?= $tbl['pro_quant'] ?></td>
-            <td><?= $tbl['pro_valor'] ?></td>
+            <td>R$: <?= $tbl['pro_valor'] ?></td>
             <td><?= $tbl['pro_ativo'] == 's' ? 'Não' : 'Sim' ?></td>
-            <td><img src="<?= $tbl['pro_img'] ?>" alt="Imagem do Produto" width="100"></td>
+            <td><img src="<?= $tbl['pro_img'] ?>" alt="Imagem do Produto" width="100" height="100"></td>
+            <td><a href="alteraproduto.php?id=<?= $tbl[0] ?>"><input type="button" value="ALTERAR DADOS"> </a> </td>
+
         </tr>
+        
+                       
 <?php
     }
 } else {

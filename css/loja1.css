@@ -1,0 +1,101 @@
+
+
+/* Estilo do fundo */
+#background {
+    background-color: #222; /* Cor de fundo escura */
+    color: #fff; /* Texto branco */
+    font-family: Arial, sans-serif; /* Fonte padrão */
+  }
+  .preto{
+    background-color:#222;
+  }
+  
+  /* Estilo do container */
+  .container {
+    width: 80%;
+    margin: 0 auto;
+    padding: 20px;
+  }
+  
+  /* Estilo da lista de produtos */
+  .product-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+  
+  /* Estilo do produto individual */
+  .product {
+    background-color: #333; /* Cor de fundo mais escura */
+    color: #fff; /* Texto branco */
+    border: 1px solid #444;
+    padding: 10px;
+    margin: 10px;
+    width: calc(33.33% - 20px); /* Layout de 3 colunas com margens */
+  }
+  
+  /* Estilo da imagem do produto */
+  .product img {
+    max-width: 100%;
+  }
+  
+.produto-link {
+    text-decoration: none; /* Remove o sublinhado do link, se desejar */
+}
+ 
+.produto-button {
+    background-color: #FF4500;
+    color: #fff;
+    padding: 5px 10px;
+    border: none;
+    cursor: pointer;
+    font-weight: bold;
+    border-radius: 5px;
+}
+  /* Estilo do campo de quantidade */
+  .product input[type="number"] {
+    width: 50px;
+    padding: 5px;
+  }
+
+  .menu {
+    list-style-type: none; /* Remove os marcadores de lista */
+    margin: 0;
+    padding: 0;
+    background-color: #222; /* Cor de fundo do menu */
+    border-radius: 10px;
+  }
+  
+  .menu li {
+    display: inline-block; /* Itens de menu ficam lado a lado */
+  }
+  
+  .menu li a {
+    display: block; /* Links são elementos de bloco para ocuparem toda a largura disponível */
+    padding: 8px 16px; /* Espaçamento interno dos links */
+    text-decoration: none; /* Remove a decoração de texto padrão (sublinhado) */
+    color: #fff; /* Cor do texto dos links */
+  }
+  
+  .menu li a:hover {
+    background-color: #555; /* Cor de fundo ao passar o mouse sobre os links */
+    color: #fff; /* Cor do texto ao passar o mouse sobre os links */
+    border-radius: 10px;
+  }
+  
+  .menuloja {
+    float: right;
+  }
+   /* DIV DO FORMULÁRIO */
+   .formulario {
+    float: left;
+    margin-left: 10%;
+  }
+  
+  .profile {
+    float: right;
+    margin: 7px 5px 0 0;
+    color: #fff;
+  }
+
+  

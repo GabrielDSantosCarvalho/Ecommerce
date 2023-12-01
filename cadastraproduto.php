@@ -1,5 +1,5 @@
 <?php
-    include("conectadb.php");
+    include("cabecalho.php");
 
     // Verifica se o formulário foi enviado
     if ($_SERVER["REQUEST_METHOD"] == "POST") {
@@ -44,7 +44,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <link rel="stylesheet" href="./estiloadm.css">
+    <link rel="stylesheet" href="./css/stylesadm.css">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Cadastro de Produtos</title>
 </head>

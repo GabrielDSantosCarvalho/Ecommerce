@@ -1,0 +1,138 @@
+
+html {
+    background-color: #333; /* Cor de fundo geral */
+    color: #fff; /* Cor do texto principal */
+  }
+  
+  .menu {
+    list-style-type: none; /* Remove os marcadores de lista */
+    margin: 0;
+    padding: 0;
+    background-color: #222; /* Cor de fundo do menu */
+    border-radius: 10px;
+  }
+  
+  .menu li {
+    display: inline-block; /* Itens de menu ficam lado a lado */
+  }
+  
+  .menu li a {
+    display: block; /* Links são elementos de bloco para ocuparem toda a largura disponível */
+    padding: 8px 16px; /* Espaçamento interno dos links */
+    text-decoration: none; /* Remove a decoração de texto padrão (sublinhado) */
+    color: #fff; /* Cor do texto dos links */
+  }
+  
+  .menu li a:hover {
+    background-color: #555; /* Cor de fundo ao passar o mouse sobre os links */
+    color: #fff; /* Cor do texto ao passar o mouse sobre os links */
+    border-radius: 10px;
+  }
+  
+  .menuloja {
+    float: right;
+  }
+  
+  /* DIV DO FORMULÁRIO */
+  .formulario {
+    float: left;
+    margin-left: 10%;
+  }
+  
+  .profile {
+    float: right;
+    margin: 7px 5px 0 0;
+  }
+  
+  /* PADRONIZAÇÃO DA TAG FORM */
+  form {
+    background-color: #222;
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.3);
+    margin: 20px auto;
+    padding: 20px;
+    width: 300px;
+  }
+  
+  input {
+    background-color: #444;
+    border: none;
+    border-radius: 3px;
+    color: #fff; /* Cor do texto dentro dos campos de entrada */
+  }
+  
+  input[type="text"],
+  input[type="password"],
+  input[type="number"],
+  input[type="decimal"],
+  input[type="date"],
+  input[type="file"],
+  textarea {
+    background-color: #333;
+    box-sizing: border-box;
+    display: block;
+    font-size: 16px;
+    margin-bottom: 10px;
+    padding: 10px;
+    width: 100%;
+    color: #fff; /* Cor do texto dentro dos campos de entrada */
+    resize: none;
+  }
+  
+  /* ESTILO DAS TABELAS */
+  table {
+    border-collapse: collapse;
+    text-align: center;
+    color: #fff; /* Cor do texto nas tabelas */
+    width: 75%;
+    margin: auto;
+  }
+  
+  h2 {
+    color: #fff;
+  }
+  
+  h1 {
+    color: #fff;
+  }
+  
+  p {
+    color: #fff;
+  }
+  
+  .caixaexclui {
+    width: 300px;
+    height: 300px;
+    margin: 0 auto;
+  }
+  
+  /* IMAGEM DO ALTERA PRODUTO */
+  .imagem_atual {
+    float: right;
+    position: relative;
+    margin-top: 1.5%;
+    margin-right: 5%;
+    width: 40%;
+    height: 40%;
+    border-radius: 10px;
+  }
+  
+  /* FORM DO ALTERA PRODUTO */
+  .visualizaproduto {
+    background-color: #222;
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.3);
+    margin: 20px auto;
+    margin-left: 10px;
+    padding: 20px;
+    width: 500px;
+  }
+  
+  .finalizabotao {
+    width: 100px;
+    height: 50px;
+    border-radius: 10px;
+    font-size: smaller;
+  }
+  
+  
